@@ -8,9 +8,27 @@ export const API_OPTION = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyOGViNTBlMzIyMDk0NjNmOWYzNzg1NTVmNzNjODY2NiIsInN1YiI6IjY1OWI4OTNiYmQ1ODhiMjA5OThkMTg5MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.NhD-zEN5yfPVqu1p9E1dP99c-ujs4j4zftXfNINJQDc",
-  },
+    Authorization:`Bearer ${process.env.REACT_APP_TMDB_TOKEN}`
+  }
+     
 };
 
 export const IMG_CDN = "https://image.tmdb.org/t/p/w300/";
+
+export const BG_IMG =
+  "https://assets.nflxext.com/ffe/siteui/vlv3/a73c4363-1dcd-4719-b3b1-3725418fd91d/1c598436-a03a-49fc-afc5-69e717e55e3d/LK-en-20231016-popsignuptwoweeks-perspective_alpha_website_medium.jpg";
+
+export const SUPPORTED_LANGUAGES = [
+  {
+    identifier: "en",
+    name: "English",
+  },
+  {
+    identifier: "german",
+    name: "German",
+  },
+  {
+    identifier: "arabic",
+    name: "Arabic",
+  },
+];

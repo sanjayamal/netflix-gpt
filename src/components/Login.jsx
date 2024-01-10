@@ -10,7 +10,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../appStore/userSlice";
-import { DEFAULT_USER_AVATAR } from "../utils/constant";
+import { BG_IMG, DEFAULT_USER_AVATAR } from "../utils/constant";
 
 const Login = () => {
   const [isSignInForm, setSignInForm] = useState(true);
@@ -88,10 +88,7 @@ const Login = () => {
         <Header />
       </div>
       <div className="absolute">
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/a73c4363-1dcd-4719-b3b1-3725418fd91d/1c598436-a03a-49fc-afc5-69e717e55e3d/LK-en-20231016-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
-          alt="background-image"
-        />
+        <img src={BG_IMG} alt="background" />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
