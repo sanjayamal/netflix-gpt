@@ -5,8 +5,8 @@ import MovieList from "./MovieList";
 const MovieContainer = () => {
   const movies = useSelector((store) => store.movies);
   return (
-    <div className="bg-black">
-      <div className="-mt-52 relative z-30">
+    <div className="bg-black pb-1">
+      <div className="mt-0 md:-mt-52 relative z-30">
         {movies?.nowPlayingMovies && (
           <MovieList title="Now Playing" movies={movies?.nowPlayingMovies} />
         )}

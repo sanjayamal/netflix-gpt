@@ -11,13 +11,19 @@ const MovieSuggestion = () => {
     return () => dispatch(clearMoviesDetail());
   }, []);
   return (
-    <div>
+    <>
       <div className="fixed -z-10">
-        <img src={BG_IMG} alt="background" />
+        <img
+          className="h-screen md:h-full object-cover"
+          src={BG_IMG}
+          alt="background"
+        />
       </div>
-      <GPTSearchBar />
-      <MovieSuggestionResult />
-    </div>
+      <div className="">
+        <GPTSearchBar />
+        <MovieSuggestionResult />
+      </div>
+    </>
   );
 };
 

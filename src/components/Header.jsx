@@ -46,8 +46,8 @@ const Header = () => {
     dispatch(changeLanguage(lang));
   };
   return (
-    <div className="absolute w-full px-8 py-2 bg-gradient-to-b from-black z-30 flex justify-between">
-      <img className="w-44" src={LOGO} alt="logo" />
+    <div className="absolute w-full px-8 py-2 bg-gradient-to-b from-black z-30 flex justify-between flex-col md:flex-row">
+      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
       {user && (
         <div className="flex p-2">
           {showGPTSearch && (
@@ -77,7 +77,7 @@ const Header = () => {
 
           {/* <img className="w-12 h-12" src={user.photoURL} alt="user icon" /> */}
           <img
-            className="inline-block h-10 w-10 rounded-full ring-2 ring-white m-2"
+            className="hidden md:inline-block h-10 w-10 rounded-full ring-2 ring-white m-2"
             src={user.photoURL}
             alt="user"
           />

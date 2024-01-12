@@ -9,10 +9,10 @@ const MainContainer = () => {
   if (!movies) return;
 
   const rndInt = randomIntFromInterval(0, 10);
-  const mainMovie = movies[rndInt];
+  const mainMovie = movies[4];
   const { original_title, overview, id } = mainMovie;
   return (
-    <div>
+    <div className="pt-[45%] md:pt-0 bg-black">
       <VideoTitle title={original_title} overview={overview} />
       <VideoBackground movieId={id} />
     </div>
